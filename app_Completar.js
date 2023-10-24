@@ -1,9 +1,22 @@
 var pagina = 1;
 const btnAnterior = document.getElementById('btnAnterior');
 const btnSiguiente = document.getElementById('btnSiguiente');
+const h1 = document.querySelector('h1')
+const header = document.querySelector('header')
 let imagepath = ""
 const Urlimg = `https://image.tmdb.org/t/p/w500${imagepath}`
 const API_KEY = "629ef7536f1f9623e5a6556c7b020e2e"
+
+header.addEventListener("mouseenter", () => {
+	h1.innerHTML = "Clickme"
+
+})
+
+header.addEventListener("mouseleave", () => {
+	h1.textContent = "NETFLIX"
+
+
+})
 
 btnSiguiente.addEventListener('click', () => {
 	if( pagina < 1000000){
